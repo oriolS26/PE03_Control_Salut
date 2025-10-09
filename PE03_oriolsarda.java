@@ -10,13 +10,13 @@ public class PE03_oriolsarda {
 
         //Menu
         System.out.println("Menu");
-        System.out.println("Sisusplau, escull una opcio entre a: Introduccio de dades, b: Modificar dades o c: Visualitzar dades");
+        System.out.println("Sisusplau, escull una opcio entre 1: Introduccio de dades, 2: Modificar dades, 3: Visualitzar dades o 4: Sortir");
         opcio1 = e.nextLine();
 
         switch (opcio1) {
-            case "a":
+            case "1":
                 System.out.println("Has escollit Introduccio de dades");
-                if (opcio1 == "a")
+                if (opcio1 == "1")
                 {
                     System.out.println("Siusplau, introdueix el teu nom complet: ");
                     Nom = e.nextLine();
@@ -40,11 +40,14 @@ public class PE03_oriolsarda {
                     }
                 }   
                 break;
-            case "b":
+            case "2":
                 System.out.println("Has escollit Modificar dades");
                 break;
-            case "c":
+            case "3":
                 System.out.println("Has escollit Visualitzar dades");
+                break;
+            case "4":
+                System.out.println("Has escollit Sortir");
                 break;
             default:
                 System.out.println("Opcio incorrecta");
