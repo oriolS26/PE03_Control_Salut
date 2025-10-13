@@ -6,9 +6,13 @@ public class PE03_oriolsarda {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         //Variables
-        String opcio1, Nom, pesStr, alturaStr;
-        int edat;
-        double pes, altura;
+        String opcio1, Nom, pesStr, alturaStr, opcio2;
+        String noumNom, nouEdat, nouPes, nouAltura;
+        int edat = 0;
+        double pes = 0.0, altura = 0.0;
+
+        String nom = "";
+        boolean dadesIntrod = false;
 
         while (true) {
 
@@ -58,7 +62,9 @@ public class PE03_oriolsarda {
                     if ((altura >= 2.5) || (altura <= 0.5))
                     {
                         System.out.println("Altura incorrecta");
+                        break;
                     }
+                    dadesIntrod = true;
                 }
                     catch (NumberFormatException e)
                     {
@@ -73,6 +79,24 @@ public class PE03_oriolsarda {
                 break;
             case "2":
                 System.out.println("Has escollit Modificar dades");
+                if (!dadesIntrod) 
+                {
+                    System.out.println("Error: Primer has d'introduir les dades");
+                    break;
+                }
+                System.out.println("Quina dada vols modificar? (nom, edat, pes, altura)");
+                opcio2 = scanner.nextLine();
+                try 
+                {
+                    switch (opcio2) {
+                        case "nom":
+                            System.out.println();
+                            break;
+                    
+                        default:
+                            break;
+                    }
+                }
                 break;
             case "3":
                 System.out.println("Has escollit Visualitzar dades");
