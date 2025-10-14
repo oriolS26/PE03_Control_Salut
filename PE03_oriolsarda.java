@@ -19,7 +19,7 @@ public class PE03_oriolsarda {
         //Menu
         System.out.println("Menu");
         System.out.println("Sisusplau, escull una opcio entre:  ");
-        System.out.println("1: Introduccio de dadesades");
+        System.out.println("1: Introduccio de dades");
         System.out.println("2: Modificar dades");
         System.out.println("3: Visualitzar dades");
         System.out.println("4: Sortir");
@@ -141,7 +141,18 @@ public class PE03_oriolsarda {
                         default:
                             System.out.println("Camp no vàlid");
                     }
-                }
+                } 
+                catch (NumberFormatException e)
+                    {
+                        System.out.println("Error: format numèric invàlid");
+                        System.out.println(e.getMessage());
+                        break;
+                    }
+                    catch (Exception e)
+                    {
+                        System.out.println("Error inesperat");
+                        System.out.println(e.getMessage());
+                    }
                 break;
             case "3":
                 System.out.println("Has escollit Visualitzar dades");
