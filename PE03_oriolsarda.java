@@ -7,7 +7,7 @@ public class PE03_oriolsarda {
         Scanner scanner = new Scanner(System.in);
         //Variables
         String opcio1, Nom, pesStr, alturaStr, opcio2;
-        String noumNom, nouEdat, nouPes, nouAltura;
+        String nouNom;
         int edat = 0;
         double pes = 0.0, altura = 0.0;
 
@@ -90,11 +90,56 @@ public class PE03_oriolsarda {
                 {
                     switch (opcio2) {
                         case "nom":
-                            System.out.println();
+                            System.out.println("Introdueix el nou nom: ");
+                            nouNom = scanner.nextLine();
+                            if (nouNom.equals(""))
+                            {
+                                System.out.println("Nom incorrecte");
+                            }
+                            else
+                            {
+                                nom = nouNom;
+                                System.out.println("Nom modificat correctament");
+                            }
                             break;
-                    
+                        case "edat":
+                            System.out.println("Introdueix la nova edat: ");
+                            edat = Integer.parseInt(scanner.nextLine());
+                             if (edat > 120 || edat < 0)
+                            {
+                                System.out.println("Error: L'edat ha de ser un enter posistiu positiu mes petit o igual que 120");
+                            }
+                            else
+                            {
+                                System.out.println("Edat modificada correctament");
+                            }
+                            break;
+                        case "pes":
+                            System.out.println("Introdueix el nou pes");
+                            pes = Double.parseDouble(scanner.nextLine().replace(',', '.'));
+                            if ((pes > 400) || (pes <= 0)) 
+                            {
+                                System.out.println("Error: El pes no pot ser major que 400 kg");
+                            }
+                            else
+                            {
+                                System.out.println("Pes modificat correctament");
+                            }
+                            break;
+                        case "altura":
+                            System.out.println("Introdueix la nova altura (m): ");
+                            altura = Double.parseDouble(scanner.nextLine().replace(',', '.'));
+                            if ((altura >= 2.5) || (altura <= 0.5))
+                            {
+                                System.out.println("Altura incorrecta");
+                            }
+                            else
+                            {
+                                System.out.println("Dades introduides correctament");
+                            }
+                            break;
                         default:
-                            break;
+                            System.out.println("Camp no vàlid");
                     }
                 }
                 break;
