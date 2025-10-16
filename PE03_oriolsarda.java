@@ -184,6 +184,18 @@ public class PE03_oriolsarda {
                 {
                     categoria = "Obesitat";
                 }
+                fcmax = 220 - edat;
+                fc50 = (int) (fcmax * 0.5);
+                fc80 = (int) (fcmax * 0.85);
+                aigua = pes * 0.35/1000;
+                anyNaix = Year.now().getValue() - edat;
+
+                System.out.println("-------------------------------");
+                System.out.println("Les Teves dades son:");
+                System.out.println("-------------------------------");
+                System.out.println("Nom: " + nomVisualitzat);
+                System.out.printf("Edat: %d anys | Pes: %.2f kg | Altura: %.2f m\n", edat, pes, altura);
+                System.out.printf("IMC: %.2f (%s)\n" ,imc, categoria);
 
             case "4":
                 System.out.println("Has escollit Sortir");
