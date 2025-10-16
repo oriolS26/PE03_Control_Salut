@@ -202,7 +202,8 @@ public class PE03_oriolsarda {
                 System.out.printf("Aigua recomenada: %.2f litres\n", aigua);
                 System.out.printf("Any de Naixement: %d\n", anyNaix);
                 System.out.println("-------------------------------");
-
+                break;
+             
             case "4":
                 System.out.println("Has escollit Sortir");
                 scanner.close();
@@ -213,4 +214,16 @@ public class PE03_oriolsarda {
             }
         }
     }
+    public static String normalitzarNom(String nom) {
+        String[] parts = nom.trim().toLowerCase().split("\\s+");
+        StringBuilder nomNormalitzat = new StringBuilder();
+        for (String part : parts) {
+            if (part.length() > 0) {
+                nomNormalitzat.append(Character.toUpperCase(part.charAt(0)))
+                              .append(part.substring(1))
+                              .append(" ");
+            }
+        }
+        return nomNormalitzat.toString().trim();
+    } //He fet aixo amb ajude de chatGPT
 }
