@@ -17,6 +17,7 @@ public class PE03_oriolsarda {
         String nom = "";
         boolean dadesIntrod = false;
         while (true) {
+        Nom = nom;
 
         //Menu
         System.out.println("Menu");
@@ -197,9 +198,7 @@ public class PE03_oriolsarda {
                 System.out.printf("Edat: %d anys | Pes: %.2f kg | Altura: %.2f m\n", edat, pes, altura);
                 System.out.printf("IMC: %.2f (%s)\n" ,imc, categoria);
                 System.out.printf("Freqüència Cardíaca Màxima: %d bpm\n", fcmax);
-                System.out.printf("Freqüència Cardíaca 50%: %d bpm\n", fc50);
-                System.out.printf("Freqüència Cardíaca 85%: %d bpm\n", fc80);
-                System.out.printf("Aigua recomenada: %.2f litres\n", aigua);
+                System.out.printf("Freqüència Cardíaca 50%% i 80%%: %d-%d bpm\n", fc50,fc80);                System.out.printf("Aigua recomenada: %.2f litres\n", aigua);
                 System.out.printf("Any de Naixement: %d\n", anyNaix);
                 System.out.println("-------------------------------");
                 break;
