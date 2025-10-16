@@ -8,12 +8,14 @@ public class PE03_oriolsarda {
         //Variables
         String opcio1, Nom, pesStr, alturaStr, opcio2;
         String nouNom;
+        String categoria,nomVisualitzat;
+        int fcmax,fc50,fc80,anyNaix;
+        double imc,aigua;
+        //calcul variables
         int edat = 0;
         double pes = 0.0, altura = 0.0;
-
         String nom = "";
         boolean dadesIntrod = false;
-
         while (true) {
 
         //Menu
@@ -156,7 +158,33 @@ public class PE03_oriolsarda {
                 break;
             case "3":
                 System.out.println("Has escollit Visualitzar dades");
-                break;
+                 if (!dadesIntrod) 
+                {
+                    System.out.println("Error: Primer has d'introduir les dades");
+                    break;
+                }
+                //Normalitzar Nom
+                nomVisualitzat = normalitzarNom(nom);
+
+                //Calcul
+                imc = pes / (altura * altura);
+                if (imc < 18.5) 
+                {
+                    categoria = "Baix pes";
+                } 
+                else if (imc < 25) 
+                {
+                    categoria = "Pes normal";
+                } 
+                else if (imc < 30) 
+                {
+                    categoria = "Sobrepès";
+                } 
+                else 
+                {
+                    categoria = "Obesitat";
+                }
+
             case "4":
                 System.out.println("Has escollit Sortir");
                 break;
