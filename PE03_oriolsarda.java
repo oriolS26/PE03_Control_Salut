@@ -196,7 +196,13 @@ public class PE03_oriolsarda {
                 System.out.println("Nom: " + nomVisualitzat);
                 System.out.printf("Edat: %d anys | Pes: %.2f kg | Altura: %.2f m\n", edat, pes, altura);
                 System.out.printf("IMC: %.2f (%s)\n" ,imc, categoria);
-
+                System.out.printf("Freqüència Cardíaca Màxima: %d bpm\n", fcmax);
+                System.out.printf("Freqüència Cardíaca 50%: %d bpm\n", fc50);
+                System.out.printf("Freqüència Cardíaca 85%: %d bpm\n", fc80);
+                System.out.printf("Aigua recomenada: %.2f litres\n", aigua);
+                System.out.printf("Any de Naixement: %d\n", anyNaix);
+                System.out.println("-------------------------------");
+                
             case "4":
                 System.out.println("Has escollit Sortir");
                 break;
