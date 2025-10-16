@@ -202,10 +202,11 @@ public class PE03_oriolsarda {
                 System.out.printf("Aigua recomenada: %.2f litres\n", aigua);
                 System.out.printf("Any de Naixement: %d\n", anyNaix);
                 System.out.println("-------------------------------");
-                
+
             case "4":
                 System.out.println("Has escollit Sortir");
-                break;
+                scanner.close();
+                return;
             default:
                 System.out.println("Opcio incorrecta");
                 break;
